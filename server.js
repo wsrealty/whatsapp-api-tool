@@ -8,6 +8,11 @@ app.use(bodyParser.json());
 const token = process.env.WHATSAPP_TOKEN;
 const phone_number_id = process.env.PHONE_NUMBER_ID;
 
+app.get('/', (req, res) => {
+  res.send('✅ WhatsApp API Tool is running.');
+});
+
+
 // Send WhatsApp Message
 app.post('/send', async (req, res) => {
   const { to, message } = req.body;
