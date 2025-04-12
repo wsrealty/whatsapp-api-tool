@@ -15,7 +15,7 @@ export default function App() {
     if (!to || !message) return alert('Please fill both fields.');
     setLoading(true);
     try {
-      const res = await axios.post('https://your-app-name.onrender.com/send', {
+      const res = await axios.post('https://whatsapp-api-tool.onrender.com/send', {
         to,
         message
       });
@@ -36,7 +36,7 @@ export default function App() {
       <Card className="mb-6">
         <CardContent className="space-y-4 p-4">
           <Input
-            placeholder="Phone number (e.g. 9198XXXXXXXX)"
+            placeholder="Phone number (e.g. 919930063061)"
             value={to}
             onChange={(e) => setTo(e.target.value)}
           />
